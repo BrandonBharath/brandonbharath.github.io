@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Brandon Bharath</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body class="bg-[#242323]"><!-- bg-gradient-to-r from-slate-900 to-slate-700  -->
+        <nav class="fixed w-full pt-5 pb-5 z-50">
+            <div class="hidden md:flex bg-[#142a59] justify-around pt-5 pb-5 mx-76 rounded-lg">
+                <p id="menu_1" class="font-semibold text-white p-2 cursor-pointer transform duration-300 ease-in-out hover:scale-130" onclick="scroll_to_section(1)">Home</p>
+                <p id="menu_2" class="font-semibold text-white p-2 cursor-pointer transform duration-300 ease-in-out hover:scale-130" onclick="scroll_to_section(2)">About</p>
+                <p id="menu_3" class="font-semibold text-white p-2 cursor-pointer transform duration-300 ease-in-out hover:scale-130" onclick="scroll_to_section(3)">Skills</p>
+                <!-- <p id="menu_3" class="font-semibold text-white p-2 cursor-pointer transform duration-300 ease-in-out hover:scale-130" onclick="scroll_to_section(3)">Projects</p> -->
+                <p id="menu_4" class="font-semibold text-white p-2 cursor-pointer transform duration-300 ease-in-out hover:scale-130" onclick="scroll_to_section(4)">Contact</p>
+            </div>
+            
+            <div class="md:hidden grid grid-cols-1 grid-rows-1">
+                <div id="close-button" class="md:hidden bg-[#0f0f0f] flex items-start w-min p-4 m-4 rounded-full col-start-1 row-start-1" onclick="toggle_menu()">
+                    <i class="fa fa-remove self-center text-white" style="font-size: 1rem"></i> 
+                </div>
+                <div id="menu-button" class="md:hidden bg-[#0f0f0f] flex items-start w-min p-4 m-4 rounded-full col-start-1 row-start-1" onclick="toggle_menu()">
+                    <i class="fa fa-bars self-center text-white" style="font-size: 1rem"></i> 
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="bg-[#0f0f0f] h-screen w-full md:translate-full">
+                <div class="grid grid-cols-1 gap-8 pt-8 m-8 justify-items-start w-1/4 text-left">
+                    <p class="text-white text-xl" onclick="scroll_to_section_mobile(1)">Home</p>
+                    <p class="text-white text-xl" onclick="scroll_to_section_mobile(2)">About</p>
+                    <p class="text-white text-xl" onclick="scroll_to_section_mobile(3)">Skills</p>
+                    <!-- <p class="text-white text-xl" onclick="scroll_to_section_mobile(3)">Projects</p> -->
+                    <p class="text-white text-xl" onclick="scroll_to_section_mobile(4)">Contact</p>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="relative min-h-screen items-center justify-center">
+            <!-- background component here -->
+            <div id="background">
+                <div id="bg-row-container" class="background-square absolute inset-0 text-white grid grid-cols-4 gap-4 p-4 md:grid-cols-8 md:gap-8 md:p-8">
+                    
+                    <!-- <div class="p-3 rounded-xl bg-[#1c1b1b]"></div> -->
+                    <!-- script.js has code to generate the background in here -->
+                    
+                </div>
+            </div>      
+        
+            <div id="home_section" class="h-screen relative">
+                <div class="grid-cols-1 content-center items-center md:flex md:flex-row md:justify-center h-full">
+                    <div id="text-frame" class="grid grid-cols-1 mb-10 content-center justify-items-center md:w-1/2 md:ml-30 opacity-0 translate-x-8 transform transition-all duration-900 ease-out">
+                        <div class="bg-[#0f0f0f] p-8 rounded-lg text-center">
+                            <header class="text-white text-sm md:text-2xl mb-5">Hi, I'm<span class="text-[#ffd7a6] text-sm md:text-2xl mb-5"> Brandon.</span></header>
+                            <div class="justify-items-center"><header class="text-white text-sm md:text-xl">I'm a software developer currently working for O-DB Administration Limited. For the past 3 years I've been building responsive web applications catered towards corporate company processes.</header></div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 content-center justify-items-center md:w-1/2 md:mr-30">
+                        <div id="picture-frame" class="opacity-0 translate-x-8 transform transition-all duration-900 ease-out">
+                            <div class="bg-[#0f0f0f] p-2 rounded-full">
+                                <img class="rounded-full shadow-xl w-75" src="headshot.jpg"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div id="about_section" class="h-screen relative">
+                <div class="flex justify-center h-full">
+                    <div class="w-full md:w-1/3 content-center justify-items-center">
+                        <div class="bg-[#0f0f0f] p-8 rounded-lg text-center">
+                            <p class="text-white text-sm md:text-xl">Ever since highschool, I have had a love for programming and developing applications and solutions. Hence choosing software as a career path felt natural to me.</p>
+                            <p class="text-white text-sm md:text-xl mt-4">In 2022 I graduated with honors from the University of the West Indies with a Bachelors in Computer Science.</p>
+                            <p class="text-white text-sm md:text-xl mt-4">Right after graduating, I started a 3 month internship in Digicel, where I hands on experience doing server maintenance and upgrading.</p>
+                            <p class="text-white text-sm md:text-xl mt-4">Following this in 2023, I began working at O-DB Administration Limited. This is where my software developer life kickstarted and where I am still am presently. I have worked on many applications using React and React Native, alongside backend work with PostgreSQL. I have also used the Oracle Application Express platform in combination with OracleSQL to develop applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="skills_section" class="h-screen relative">
+                <div class="flex justify-center h-full">
+                    <div class="grid grid-cols-1 content-center justify-items-center gap-3">
+                        <div class="bg-[#0f0f0f] p-8 rounded-lg text-center w-full">
+                            <div id="programming-languages">
+                                <header class="text-white text-lg md:text-xl mb-5">Programming Languages</header>
+                                <div class="grid grid-cols-3 md:grid-cols-4 gap-3">
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">Javascript</div> 
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">Typescript</div> 
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">HTML</div> 
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">CSS</div> 
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">Python</div> 
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">C++</div> 
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">SQL</div> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-[#0f0f0f] p-8 rounded-lg text-center w-full">
+                            <div id="frontend-skills">
+                                <header class="text-white text-lg md:text-xl mb-5">Frontend</header>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">React</div> 
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">React Native</div>
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">Tailwind CSS</div>
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">Redux</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-[#0f0f0f] p-8 rounded-lg text-center w-full">
+                            <div id="backend-skills">
+                                <header class="text-white text-lg md:text-xl mb-5">Backend</header>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">PostgreSQL</div> 
+                                    <div class="text-md md:text-lg text-white bg-[#142a59] rounded-sm p-2">Oracle SQL</div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div id="projects_section" class="h-screen relative">
+                <div class="flex justify-center h-full">
+                    <div class="grid grid-cols-1 content-center justify-items-center">
+                        <div class="bg-[#0f0f0f] p-8 rounded-lg text-center">
+                            <header class="text-white text-sm md:text-2xl">Nothing to see here....yet.</header>
+                            <header class="text-white text-sm md:text-xl">I am currently working on developing a 2D platformer game.</header>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div id="contacts_section" class="h-screen relative">
+                <div class="flex justify-center h-full">
+                    <div class="grid grid-cols-1 content-center items-center justify-items-center">
+                        <div class="bg-[#0f0f0f] p-6 mb-10 rounded-xl text-center ">
+                            <p class="text-white text-sm md:text-xl">You can reach me through the following channels:</p>
+                        </div>
+                        <div onclick="copyToClipboard()" id="contact_frame_1" class="flex flex-row mb-6 p-6 justify-center cursor-pointer bg-[#142a59] w-1/2 md:w-full shadow-lg/30 rounded-xl transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                            <i class="fa fa-envelope-o self-center text-white" style="font-size: 3rem"></i> 
+                            <header id= "email-text" class="text-white hidden md:flex md:text-2xl self-center ml-5">brandon.jbharath@gmail.com</header>
+                        </div>
+                        <div id="contact_frame_2" class="mb-6 cursor-pointer bg-[#142a59] w-1/2 shadow-lg/30 rounded-xl transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                            <a class="w-full h-full p-6 px-10 md:p-6 flex flex-row justify-center" href="https://www.linkedin.com/in/brandonbharath/">
+                                <i class="fa fa-linkedin-square self-center text-white" style="font-size: 3rem"></i>
+                                <header class="text-white hidden md:flex md:text-2xl self-center ml-5 ">LinkedIn</header>
+                            </a>
+                        </div>
+                        <!-- <div id="contact_frame_3" class="border rounded-xl transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
+                            <p class="text-white text-2xl self-center ml-5">Resume</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

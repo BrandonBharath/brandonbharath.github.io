@@ -1,0 +1,60 @@
+.highlighted_menu{
+    /* color: black;
+    background-color: white;
+    border-radius: 1vh;  */
+    color: #ffd7a6;
+    scale: 1.4
+} 
+
+.change-color{
+    animation: pulse infinite;
+}
+
+@keyframes pulse {
+    0%{
+        background-color: #1c1b1b;
+        scale: 100% 100%;
+    }
+    5%{
+        background-color: #1c1b1b;
+        scale: 0% 100%;
+    }
+    10% {
+        background-color: #ffd7a6;
+        scale: 0% 100%;
+    }
+    15% {
+        background-color: #ffd7a6;
+        scale: 100% 100%;
+    }
+    55% {
+        background-color: #ffd7a6;
+        scale: 100% 100%;
+    }
+    60%{
+        background-color: #ffd7a6;
+        scale: 0% 100%;
+    }
+    65%{
+        background-color: #1c1b1b;
+        scale: 0% 100%;
+    }
+    70%{
+        background-color: #1c1b1b;
+        scale: 100% 100%;
+    }
+    100% {
+        background-color: #1c1b1b;
+        scale: 100% 100%;
+    }
+}
+
+#mobile-menu{
+    position: absolute;
+    left: -32em;
+    transition: left 200ms ease-in-out;
+}
+
+#mobile-menu.show{
+    left: 0;
+}
