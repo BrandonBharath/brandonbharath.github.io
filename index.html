@@ -138,7 +138,12 @@
                 <div class="flex justify-center h-full">
                     <div class="grid grid-cols-1 content-center items-center justify-items-center">
                         <div class="bg-[#0f0f0f] p-6 mb-10 rounded-xl text-center ">
-                            <p class="text-white text-sm md:text-xl">You can reach me through the following channels:</p>
+                            <div class="hidden md:flex">
+                                <p class="text-white text-sm md:text-xl">You can reach me through the following channels:</p>
+                            </div>
+                            <div class="md:hidden flex">
+                                <p class="text-white md:text-sm text-lg">Get in touch with me!</p>
+                            </div>
                         </div>
                         <div onclick="copyToClipboard()" id="contact_frame_1" class="flex flex-row mb-6 p-6 justify-center cursor-pointer bg-[#142a59] w-1/2 md:w-full shadow-lg/30 rounded-xl transition delay-50 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
                             <i class="fa fa-envelope-o self-center text-white" style="font-size: 3rem"></i> 
